@@ -1,36 +1,49 @@
-import './App.css';
-import React from "react";
-import Products from "./components/Products";
-import {BrowserRouter} from "react-router-dom";
-import {HashLink} from "react-router-hash-link";
+import './App.css'; // import css file for App
+import {BrowserRouter} from "react-router-dom"; // import BrowserRouter for navigation in the app
+import {HashLink} from "react-router-hash-link"; // import HashLink to navigate to the specific place on the page using hash
+import UserInputs from "./components/UserInputs"; // import UserInputs component
+import Products from "./components/Products"; // import Products component
 
-function App() {
+function App() { // function component App
 
-    return <>
-        <BrowserRouter>
-            <nav className="navbar navbar-expand-sm navbar-dark">
-                <div className="container-fluid">
-                    <ul className="navbar-nav">
-                        <li className="nav-item">
-                            <HashLink className="nav-link active" to="Products#CPU">CPU</HashLink>
-                        </li>
-                        <li className="nav-item">
-                            <HashLink className="nav-link active" to="Products#GPU">GPU</HashLink>
-                        </li>
-                        <li className="nav-item">
-                            <HashLink className="nav-link active" to="Products#RAM">RAM</HashLink>
-                        </li>
-                        <li className="nav-item">
-                            <HashLink className="nav-link active" to="Products#Hard drive">Hard Drive</HashLink>
-                        </li>
+    // function in a variable, which takes parameter event and handles submission of the form
+    // for now it just shows simple alert message to the user
+    const onSubmitHandler = (event) => {
+        alert("Form submitted successfully! We will reach out to you as soon as possible"); // show alert message to the user
+        //Write more code here to handle form submission properly
+    }
+
+    // function stored in a variable, which takes 2 parameters name and productLink, and returns list item with hash-specific link
+    const Link = ({name, productLink}) => {
+        return <li className="nav-item"> {/* create list item */}
+            {/* add link to specific product section */}
+            <HashLink className="nav-link active" to={productLink}>{name}</HashLink>
+        </li>
+    }
+
+    {/* return form with all necessary parts */}
+    return <form className="form-horizontal" onSubmit={onSubmitHandler}> {/* create form */}
+        <BrowserRouter> {/* set browser router to enable 'jumping' to locations */}
+            <nav className="navbar navbar-expand-sm navbar-dark"> {/* create navigation bar; expand it only on small screens */}
+                <div className="container-fluid"> {/* full width container */}
+                    <ul className="navbar-nav"> {/* unordered list */}
+                        <Link name="CPU" productLink="/Product#CPU"/> {/* Add link to CPU products' section */}
+                        <Link name="GPU" productLink="/Product#GPU"/> {/* Add link to GPU products' section */}
+                        <Link name="RAM" productLink="/Product#RAM"/> {/* Add link to RAM products' section */}
+                        <Link name="Hard drive" productLink="/Product#Hard drive"/> {/* Add link to hard drives products' section */}
                     </ul>
                 </div>
             </nav>
 
-            <Products></Products>
+            <h2>Please, fill in the form:</h2> {/* Headline, asking to fill in the form */}
+
+            <UserInputs /> {/* Section for the customer information inputs */}
+
+            <Products /> {/* Section to choose products */}
+
+            <button type="submit" className="btn btn-lg">Submit</button> {/* Submit button */}
         </BrowserRouter>
-    </>
+    </form>
 }
 
-
-export default App;
+export default App; // expose App component to other modules as a default component
