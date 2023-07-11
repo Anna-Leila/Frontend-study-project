@@ -1,3 +1,10 @@
+// a list of products to be displayed on the website
+// each product has id, name, type and price
+// it is also stored if the customer wants to buy the products or not
+// and the amount of each product he/she wants to buy
+
+// even if buy is false, amount is not always zero
+// we have to first look at buy to determine the amount
 const productsList = [
     {id: 0, name: "Intel Core i5-13400", type: "CPU", price: 221, buy: false, amount: 1,
         imgLink: "https://upload.wikimedia.org/wikipedia/en/4/4b/Intel_Core_i5_%2811th_generation%2C_logo%29.svg"},
@@ -25,4 +32,4 @@ const productsList = [
         imgLink: "https://cdn.mos.cms.futurecdn.net/vs2g2SXYpjCA9CAP3RTnBi-970-80.jpg.webp"},
 ];
 
-export default productsList;
+export default productsList; // expose productsList to usage in other files

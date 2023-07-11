@@ -10,4 +10,4 @@ function UserInfoInput({name, label, type, placeholder}) {
     </div>
 }
 
-export default UserInfoInput; // export UserInfoInput component as default
+export default UserInfoInput; // expose UserInfoInput to usage in other files
