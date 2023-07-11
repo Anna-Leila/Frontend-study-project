@@ -3,8 +3,8 @@ import ReactDOM from "react-dom/client"; // import ReactDOM to be able to render
 import App from "./App"; // import App component
 
 const root = ReactDOM.createRoot(document.getElementById("root")); // get root element form index.html
-root.render( // render element
+root.render( // put into root element the following elements
     <React.StrictMode> {/* highlight potential bugs */}
-        <App /> {/* Create App components */}
+        <App /> {/* create App component */}
     </React.StrictMode>
 );

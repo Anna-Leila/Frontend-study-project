@@ -1,26 +1,36 @@
-body {
-  margin-left: 1%;
-  margin-bottom: 1%;
-  background-color: aquamarine;
+body { /* set css for body */
+  margin-left: 1%; /* 1% margin on the left from the border of the webpage edge */
+  margin-bottom: 1%; /* 1% margin on the bottom from the border of the webpage edge */
+  background-color: aquamarine; /* */
 }
-.computerComponent {
-  margin-left: 1%;
+.computerComponent { /* set css for a row with computer component */
+  margin-left: 1%; /* 1% margin on the left from parent component */
 }
-.largeCheckbox {
-  width: 20px;
-  height: 20px;
+.largeCheckbox { /* set css for class largeCheckbox */
+  width: 20px; /* set checkbox width 20 pixels */
+  height: 20px; /* set checkbox height 20 pixels */
 }
-.app {
-  display: none;
+.navbar { /* set css for navigation bar */
+  margin-left: -1%; /* set margin -1% to extend navigation bar to the whole width of the screen */
+  margin-bottom: 0.3%; /* margin 0.3% on the bottom from parent component */
+  font-size: large; /* large font size */
+  background-color: blueviolet; /* color of navigation bar */
 }
-.navbar {
-  margin-left: -1%;
-  margin-bottom: 0.2%;
-  font-size: large;
-  background-color: blueviolet;
+.btn { /* set css for button */
+  color: white;  /* font color */
+  font-size: large; /* large font size */
+  background-color: blueviolet; /* button color */
 }
-.btn {
-  color: white;
-  font-size: large;
-  background-color: blueviolet;
+
+@media (hover: hover) { /* feature for devices on which hover works - for computers, not mobile devices */
+  .btn:hover { /* when hover oven button */
+    color: white; /* set button font color white */
+    background-color: magenta; /* set button itself magenta */
+  }
+}
+@media (hover: hover) { /* feature for devices on which hover works - for computers, not mobile devices */
+  .nav-item:hover { /* when hover over navigation bar item */
+    color: white; /* set font color white */
+    background-color: magenta; /* set item itself magenta */
+  }
 }

@@ -16,12 +16,12 @@ function App() { // function component App
     // function stored in a variable, which takes 2 parameters name and productLink, and returns list item with hash-specific link
     const Link = ({name, productLink}) => {
         return <li className="nav-item"> {/* create list item */}
-            {/* add link to specific product section */}
+            {/* add link to a specific product section */}
             <HashLink className="nav-link active" to={productLink}>{name}</HashLink>
         </li>
     }
 
-    {/* return form with all necessary parts */}
+    // return form with all necessary parts
     return <form className="form-horizontal" onSubmit={onSubmitHandler}> {/* create form */}
         <BrowserRouter> {/* set browser router to enable 'jumping' to locations */}
             <nav className="navbar navbar-expand-sm navbar-dark"> {/* create navigation bar; expand it only on small screens */}
@@ -46,4 +46,4 @@ function App() { // function component App
     </form>
 }
 
-export default App; // expose App component to other modules as a default component
+export default App; // expose App component to other files as a default component
