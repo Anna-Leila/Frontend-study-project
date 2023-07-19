@@ -27,10 +27,10 @@ function App() { // function component App
             <nav className="navbar navbar-expand-sm navbar-dark"> {/* create navigation bar; expand it only on small screens */}
                 <div className="container-fluid"> {/* full width container */}
                     <ul className="navbar-nav"> {/* unordered list */}
-                        <Link name="CPU" productLink="/Product#CPU"/> {/* Add link to CPU products' section */}
-                        <Link name="GPU" productLink="/Product#GPU"/> {/* Add link to GPU products' section */}
-                        <Link name="RAM" productLink="/Product#RAM"/> {/* Add link to RAM products' section */}
-                        <Link name="Hard drive" productLink="/Product#Hard drive"/> {/* Add link to hard drives products' section */}
+                        <Link name="CPU" productLink="/Product#cpu"/> {/* Add link to CPU products' section */}
+                        <Link name="GPU" productLink="/Product#gpu"/> {/* Add link to GPU products' section */}
+                        <Link name="RAM" productLink="/Product#ram"/> {/* Add link to RAM products' section */}
+                        <Link name="Hard drive" productLink="/Product#hard-drive"/> {/* Add link to hard drives products' section */}
                     </ul>
                 </div>
             </nav>

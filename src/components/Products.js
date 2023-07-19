@@ -43,14 +43,14 @@ function Products() {
 
     for (let product of products) { // for every product
         // create IDs for current product
-        const checkboxId = "checkboxId" + product.id; // id for the checkbox
-        const labelForCheckBoxId = "checkboxLabelId" + product.id; // id for the label next to the checkbox
+        const checkboxId = "checkbox-id-" + product.id; // id for the checkbox
+        const labelForCheckBoxId = "checkbox-label-id-" + product.id; // id for the label next to the checkbox
 
-        const amountInputId = "amountInputId" + product.id; // id for number input
-        const labelForAmountInputId = "labelForAmountInputId" + product.id; // id for the label next to number input
-        const toggleShowInput = "toggleShowInput" + product.id; // id for the section, which can be hidden
+        const amountInputId = "amount-input-id-" + product.id; // id for number input
+        const labelForAmountInputId = "label-for-amount-input-id-" + product.id; // id for the label next to number input
+        const toggleShowInput = "toggle-show-input-" + product.id; // id for the section, which can be hidden
 
-        const productKey = "productKey" + product.id; // id for the current product
+        const productKey = "product-key-" + product.id; // id for the current product
 
         // variable with frontend HTML for this product
         const productCode = <React.Fragment key={productKey}> {/* put into react fragment, because we add components in a list */}
@@ -109,16 +109,16 @@ function Products() {
     return (<> {/* return multiple elements using short syntax of React.Fragment */}
             <h4>Computer components:</h4> {/* heading for computer components */}
 
-            <h5 id="CPU">Central processing unit (CPU)</h5> {/* heading for CPU */}
+            <h5 id="cpu">Central processing unit (CPU)</h5> {/* heading for CPU */}
             <div>{CPU}</div> {/* products of type CPU */}
 
-            <h5 id="GPU">Graphical processing unit (GPU)</h5> {/* heading for GPU */}
+            <h5 id="gpu">Graphical processing unit (GPU)</h5> {/* heading for GPU */}
             <div>{GPU}</div> {/* products of type GPU */}
 
-            <h5 id="RAM">Random access memory (RAM)</h5> {/* heading for RAM */}
+            <h5 id="ram">Random access memory (RAM)</h5> {/* heading for RAM */}
             <div>{RAM}</div> {/* products of type RAM */}
 
-            <h5 id="Hard drive">Hard drive</h5> {/* heading for hard drives */}
+            <h5 id="hard-drive">Hard drive</h5> {/* heading for hard drives */}
             <div>{hardDrive}</div> {/* products of type hard drive */}
 
             <h5> {/* heading with total cost of chosen products */}
